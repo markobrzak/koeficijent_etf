@@ -108,6 +108,7 @@
 </body>
 <script>
     function racunanje(){
+    prosecna_ocena=0;
     prosek=0;
     kredit=6;
     for(i=0; i<7; i++){
@@ -117,7 +118,7 @@
         ocena1=document.getElementById(oc1).value;
         if(ocena1==5) {ocena1=0;}
         if(i>=4) {kredit=2;}
-        if(ocena1){prosek+=(predmet1*ocena1*kredit);}
+        if(ocena1){prosek+=(predmet1*ocena1*kredit);prosecna_ocena+=ocena1;}
 
     }
     kredit=6;
@@ -129,7 +130,7 @@
         if(ocena2==5) {ocena2=0;}
         if(i>=4) {kredit=2;}
         
-        if(ocena2) {prosek+=(predmet2*ocena2*kredit);}
+        if(ocena2) {prosek+=(predmet2*ocena2*kredit);prosecna_ocena+=ocena1;}
         
     }
     prom = prosek/60;
@@ -140,7 +141,9 @@
     if(prom>(2.64)) {smerovi+=" <span class='badge badge-warning'>Енергетика</span>"}
     if(prom>(5.783)) {smerovi+=" <span class='badge badge-warning'>РТИ</span>"}
     if(prom>(8.864)) {smerovi+=" <span class='badge badge-warning'>Сигнали </span>"}
-    document.getElementById("rez").innerHTML = "Коефицијент је: <span class='badge badge-info'>"+prom.toFixed(2)+"</span> | " + (smerovi=="" ? "Немате услов ни за један смер" : " Са овим коефицијентом можете уписати: "+smerovi);
+    document.getElementById("rez").innerHTML = "Коефицијент је: <span class='badge badge-info'>"+prom.toFixed(2)+"</span> | Просек је: " +prosecna_ocena.toFixed(2) +" | " + (smerovi=="" ? "Немате услов ни за један смер" : " Са овим коефицијентом можете уписати: "+smerovi);
+    
+    
 }
 
 
