@@ -141,7 +141,7 @@
     if(prom>(2.64)) {smerovi+=" <span class='badge badge-warning'>Енергетика</span>"}
     if(prom>(5.783)) {smerovi+=" <span class='badge badge-warning'>РТИ</span>"}
     if(prom>(8.864)) {smerovi+=" <span class='badge badge-warning'>Сигнали </span>"}
-    document.getElementById("rez").innerHTML = "Коефицијент је: <span class='badge badge-info'>"+prom.toFixed(2)+"</span> | Просек је: " +prosecna_ocena.toFixed(2) +" | " + (smerovi=="" ? "Немате услов ни за један смер" : " Са овим коефицијентом можете уписати: "+smerovi);
+    document.getElementById("rez").innerHTML = "Коефицијент је: <span class='badge badge-info'>"+prom.toFixed(2)+"</span> | Просек је: <span class='badge badge-info'>" +prosecna_ocena.toFixed(2) +"</span> | " + (smerovi=="" ? "Немате услов ни за један смер" : " Са овим коефицијентом можете уписати: "+smerovi);
     
     
 }
