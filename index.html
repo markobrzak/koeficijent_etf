@@ -15,6 +15,7 @@
 <body>
     <div class="float-center">
         <h3>Рачунање коефицијента - ЕТФ 1. година</h3>
+        <h5>Подаци базирани на ранг листи за упис у 2. годину школске 2021/22. године</h5>
         <div class="">
             <hr>
         <h4 id="rez" class="text-danger">Коефицијент: </h4>
@@ -60,6 +61,16 @@
                     <option value="1">Касније</option>
                 </select>
                 <input type="number" min="5" max="10" value="5" id="os17" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()">
+                <br>
+                <br>
+                <br><strong>Број обнова:</strong>
+                <select  id="obnova" onClick="racunanje()" onmouseout="racunanje()"  onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                  </select>
             </div>
             <div class="col">
                 <h5>Други семестар</h5>
@@ -100,7 +111,10 @@
                 </select>
                 <input type="number" min="5" max="10" value="5" id="os27" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()">
             </div>
+            
         </div>
+        
+       
         
     </div>
 
@@ -134,6 +148,8 @@
         
     }
     prom = prosek/60;
+    obnove = document.getElementById("obnova").value;
+    prom = prom - obnove;
     smerovi="";
     if(prom>=(-2.703)) {smerovi+="<span class='badge badge-warning'>Физичка електроника</span>"}
     if(prom>=(1.7333)) {smerovi+=" <span class='badge badge-warning'>Енергетика</span>"}
