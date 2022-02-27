@@ -135,12 +135,12 @@
     }
     prom = prosek/60;
     smerovi="";
-    if(prom>(-2.703)) {smerovi+="<span class='badge badge-warning'>Физичка електроника</span>"}
-    if(prom>(1.7333)) {smerovi+=" <span class='badge badge-warning'>Енергетика</span>"}
-    if(prom>(2.4)) {smerovi+=" <span class='badge badge-warning'>Електроника</span>"} 
-    if(prom>(3.6)) {smerovi+=" <span class='badge badge-warning'>Телеком</span>"}
-    if(prom>(6.8)) {smerovi+=" <span class='badge badge-warning'>РТИ</span>"}
-    if(prom>(9.2333)) {smerovi+=" <span class='badge badge-warning'>Сигнали </span>"}
+    if(prom>=(-2.703)) {smerovi+="<span class='badge badge-warning'>Физичка електроника</span>"}
+    if(prom>=(1.7333)) {smerovi+=" <span class='badge badge-warning'>Енергетика</span>"}
+    if(prom>=(2.4)) {smerovi+=" <span class='badge badge-warning'>Електроника</span>"} 
+    if(prom>=(3.6)) {smerovi+=" <span class='badge badge-warning'>Телеком</span>"}
+    if(prom>=(6.8)) {smerovi+=" <span class='badge badge-warning'>РТИ</span>"}
+    if(prom>=(9.2333)) {smerovi+=" <span class='badge badge-warning'>Сигнали </span>"}
     document.getElementById("rez").innerHTML = "Коефицијент је: <span class='badge badge-info'>"+prom.toFixed(2)+"</span> | " + (smerovi=="" ? "Немате услов ни за један смер" : " Са овим коефицијентом можете уписати: "+smerovi);
     
     
