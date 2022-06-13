@@ -125,6 +125,7 @@
 
     prosek=0;
     kredit=6;
+    ESPB=0;
     for(i=0; i<7; i++){
         pred1="s1"+(i+1);
         oc1="os1"+(i+1);
@@ -132,7 +133,7 @@
         ocena1=document.getElementById(oc1).value;
         if(ocena1==5) {ocena1=0;}
         if(i>=4) {kredit=2;}
-        if(ocena1){prosek+=(predmet1*ocena1*kredit);}
+        if(ocena1){prosek+=(predmet1*ocena1*kredit);ESPB+=kredit;}
 
     }
     kredit=6;
@@ -144,7 +145,7 @@
         if(ocena2==5) {ocena2=0;}
         if(i>=4) {kredit=2;}
         
-        if(ocena2) {prosek+=(predmet2*ocena2*kredit);}
+        if(ocena2) {prosek+=(predmet2*ocena2*kredit);ESPB+=kredit;}
         
     }
     prom = prosek/60;
@@ -157,6 +158,7 @@
     if(prom>=(3.6)) {smerovi+=" <span class='badge badge-warning'>Телеком</span>"}
     if(prom>=(6.8)) {smerovi+=" <span class='badge badge-warning'>РТИ</span>"}
     if(prom>=(9.2333)) {smerovi+=" <span class='badge badge-warning'>Сигнали </span>"}
+    if(ESPB>=48) {smerovi+=" <span class='badge badge-info'>буџет </span>"} else if (smerovi!=="") {smerovi+=" <span class='badge badge-info'>самофинансирање </span>"}
     document.getElementById("rez").innerHTML = "Коефицијент је: <span class='badge badge-info'>"+prom.toFixed(2)+"</span> | " + (smerovi=="" ? "Немате услов ни за један смер" : " Са овим коефицијентом можете уписати: "+smerovi);
     
     
