@@ -1,171 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="undefined" crossorigin="anonymous">
-    <title>Рачунање коефицијента 1.2</title>
-    <style>
-        body{
-            overflow-x: hidden;
-        }
-    </style>
-</head>
-<body>
-    <div class="float-center">
-        <h3>Рачунање коефицијента - ЕТФ 1. година</h3>
-        <h5>Подаци базирани на ранг листи за упис у 2. годину школске 2021/22. године</h5>
-        <div class="">
-            <hr>
-        <h4 id="rez" class="text-danger">Коефицијент: </h4>
-        <hr>
-        </div>
-        <div class="row">
-            
-            <div class="col">
-                <h5>Први семестар</h5>
-                <hr>
-                Основи електротехнике 1 <select id="s11" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()"><br>
-                    <option value="1.2">Јануар/Фебруар</option>
-                    <option value="1">Касније</option>
-                </select>
-                <input type="number" min="5" max="10" value="5" id="os11" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()"><br>
-                Математика 1 <select id="s12" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()">
-                    <option value="1.2">Јануар/Фебруар</option>
-                    <option value="1">Касније</option>
-                </select>
-                <input type="number" min="5" max="10" value="5" id="os12" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()"><br>
-                Физика 1 <select id="s13" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()">
-                    <option value="1.2">Јануар/Фебруар</option>
-                    <option value="1">Касније</option>
-                </select>
-                <input type="number" min="5" max="10" value="5" id="os13" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()"><br>
-                Програмирање 1 <select id="s14" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()">
-                    <option value="1.2">Јануар/Фебруар</option>
-                    <option value="1">Касније</option>
-                </select>
-                <input type="number" min="5" max="10" value="5" id="os14" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()"><br>
-                Лабораторијске вежбе из физике <select id="s15" onClick="racunanje()" onmouseout="racunanje()" onmouseover="racunanje()" oninput="racunanje()">
-                    <option value="1.2">Јануар/Фебруар</option>
-                    <option value="1">Касније</option>
-                </select>
-                <input type="number" min="5" max="10" value="5" id="os15" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()"><br>
-                Изборни предмет 1 <select id="s16" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()">
-                    <option value="1.2">Јануар/Фебруар</option>
-                    <option value="1">Касније</option>
-                </select>
-                <input type="number" min="5" max="10" value="5" id="os16" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()"><br>
-                Изборни предмет 2 <select id="s17" onClick="racunanje()" onmouseout="racunanje()"  onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()">
-                    <option value="1.2">Јануар/Фебруар</option>
-                    <option value="1">Касније</option>
-                </select>
-                <input type="number" min="5" max="10" value="5" id="os17" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()">
-                <br>
-                <br>
-                <br><strong>Број обнова:</strong>
-                <select  id="obnova" onClick="racunanje()" onmouseout="racunanje()"  onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()">
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                  </select>
-            </div>
-            <div class="col">
-                <h5>Други семестар</h5>
-                <hr>
-                Основи електротехнике 2 <select id="s21" onClick="racunanje()" onmouseout="racunanje()" onClick="racunanje()" onmouseover="racunanje()" oninput="racunanje()"> 
-                    <option value="1.2">Јун/Јул</option>
-                    <option value="1">Касније</option>
-                </select>
-                <input type="number" min="5" max="10" value="5" id="os21" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()"><br>
-                Математика 2 <select id="s22" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()">
-                    <option value="1.2">Јун/Јул</option>
-                    <option value="1">Касније</option>
-                </select>
-                <input type="number" min="5" max="10" value="5" id="os22" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()"><br>
-                Физика 2/ ОРТ 2 <select id="s23" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()">
-                    <option value="1.2">Јун/Јул</option>
-                    <option value="1">Касније</option>
-                </select>
-                <input type="number" min="5" max="10" value="5" id="os23" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()"><br>
-                Програмирање 2 <select id="s24" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()"> oninput="racunanje()"
-                    <option value="1.2">Јун/Јул</option>
-                    <option value="1">Касније</option>
-                </select>
-                <input type="number" min="5" max="10" value="5" id="os24" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()"><br>
-                Лабораторијске вежбе из ОЕТ-а <select id="s25" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()">
-                    <option value="1.2">Јун/Јул</option>
-                    <option value="1">Касније</option>
-                </select>
-                <input type="number" min="5" max="10" value="5" id="os25"  onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()"><br>
-                Изборни предмет 1 <select id="s26" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()">
-                    <option value="1.2">Јун/Јул</option>
-                    <option value="1">Касније</option>
-                </select>
-                <input type="number" min="5" max="10" value="5" id="os26" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()"><br>
-                Изборни предмет 2 <select id="s27" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()">
-                    <option value="1.2">Јун/Јул</option>
-                    <option value="1">Касније</option>
-                </select>
-                <input type="number" min="5" max="10" value="5" id="os27" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()">
-            </div>
-            
-        </div>
-        
-       
-        
-    </div>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="undefined" crossorigin="anonymous">
+		<title>Рачунање коефицијента 1.3</title>
+		<style>
+			body {
+				overflow-x: hidden;
+			}
+		</style>
+	</head>
 
-    </div>
-</body>
-<script>
-    function racunanje(){
+	<script>
+		function racunanje() {
+			zbir = 0;
+			kredit = 6;
+			ESPB = 0;
+			semestar = 1;
+			for (i = 0; i < 14; i++) {
+				if(i == 7) { kredit = 6; semestar = 2; }
+				if((i % 7) == 4) { kredit = 2; }
 
-    prosek=0;
-    kredit=6;
-    ESPB=0;
-    for(i=0; i<7; i++){
-        pred1="s1"+(i+1);
-        oc1="os1"+(i+1);
-        predmet1=document.getElementById(pred1).value;
-        ocena1=document.getElementById(oc1).value;
-        if(ocena1==5) {ocena1=0;}
-        if(i>=4) {kredit=2;}
-        if(ocena1){prosek+=(predmet1*ocena1*kredit);ESPB+=kredit;}
+				r = "s" + semestar + ((i % 7) + 1);
+				oc = "os" + semestar + ((i % 7) + 1);
+				rok = document.getElementById(r).value;
+				ocena = document.getElementById(oc).value;
 
-    }
-    kredit=6;
-    for(i=0; i<7; i++){
-        pred2="s2"+(i+1);
-        oc2="os2"+(i+1);
-        predmet2=document.getElementById(pred2).value;
-        ocena2=document.getElementById(oc2).value;
-        if(ocena2==5) {ocena2=0;}
-        if(i>=4) {kredit=2;}
-        
-        if(ocena2) {prosek+=(predmet2*ocena2*kredit);ESPB+=kredit;}
-        
-    }
-    prom = prosek/60;
-    obnove = document.getElementById("obnova").value;
-    prom = prom - obnove;
-    smerovi="";
-    if(prom>=(-2.703)) {smerovi+="<span class='badge badge-warning'>Физичка електроника</span>"}
-    if(prom>=(1.7333)) {smerovi+=" <span class='badge badge-warning'>Енергетика</span>"}
-    if(prom>=(2.4)) {smerovi+=" <span class='badge badge-warning'>Електроника</span>"} 
-    if(prom>=(3.6)) {smerovi+=" <span class='badge badge-warning'>Телеком</span>"}
-    if(prom>=(6.8)) {smerovi+=" <span class='badge badge-warning'>РТИ</span>"}
-    if(prom>=(9.2333)) {smerovi+=" <span class='badge badge-warning'>Сигнали </span>"}
-    if(ESPB>=48) {smerovi+=" <span class='badge badge-success'>буџет </span>"} 
-    else if (ESPB>=37) {smerovi+=" <span class='badge badge-info'>самофинансирање </span>"}
-    else if (smerovi!=="") {smerovi+=" <span class='badge badge-danger'>немате ЕСПБ услов </span>"}
-    document.getElementById("rez").innerHTML = "Коефицијент је: <span class='badge badge-info'>"+prom.toFixed(2)+"</span> | " + (smerovi=="" ? "Немате услов ни за један смер" : " Са овим коефицијентом можете уписати: "+smerovi);
-    
-    
-}
+				if (ocena == "5") { ocena = 0; }
+				if (ocena) { zbir += (rok * ocena * kredit); ESPB += kredit; }
+			}
+			koef = zbir/60;
+			obnove = document.getElementById("obnova").value;
+			koef = koef - obnove;
+			smerovi = "";
+			if (koef >= -1.0300) { smerovi += " <span class='badge badge-warning'>Физичка електроника</span>" }
+			if (koef >=  3.9867) { smerovi += " <span class='badge badge-warning'>Телеком</span>" }
+			if (koef >=  4.2133) { smerovi += " <span class='badge badge-warning'>Енергетика</span>" }
+			if (koef >=  4.5800) { smerovi += " <span class='badge badge-warning'>Електроника</span>" }
+			if (koef >=  7.2600) { smerovi += " <span class='badge badge-warning'>РТИ</span>" }
+			if (koef >=  9.2800) { smerovi += " <span class='badge badge-warning'>Сигнали</span>" }
 
+			if (ESPB >= 48)          { smerovi += " <span class='badge badge-success'>буџет </span>" }
+			else if (ESPB >= 37)     { smerovi += " <span class='badge badge-info'>самофинансирање </span>" }
+			else if (smerovi !== "") { smerovi += " <span class='badge badge-danger'>немате ЕСПБ услов </span>" }
+			document.getElementById("rez").innerHTML = "Коефицијент: <span class='badge badge-primary'>" + koef.toFixed(2) + "</span> | " +
+				(smerovi == "" ? "Немате услов ни за један смер" : " Са овим коефицијентом можете уписати: " + smerovi);
+		}
+	</script>
 
-</script>
+	<body>
+		<div class="float-center">
+			<h3>Рачунање коефицијента - ЕТФ 1. година</h3>
+			<h5>Подаци базирани на ранг листи за упис у 2. годину школске 2022/23. године</h5>
+			<div class="">
+				<hr>
+				<h4 id="rez" class="text-danger">Коефицијент: </h4>
+				<hr>
+			</div>
+			<div class="row">
+				<div class="col">
+					<h5>Први семестар</h5>
+					<hr>
+					Основи електротехнике 1 <select id="s11" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()"><br>
+						<option value="1.2">Јануар/Фебруар</option>
+						<option value="1">Касније</option>
+					</select>
+					<input type="number" min="5" max="10" value="5" id="os11" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()"><br>
+
+					Математика 1 <select id="s12" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()">
+						<option value="1.2">Јануар/Фебруар</option>
+						<option value="1">Касније</option>
+					</select>
+					<input type="number" min="5" max="10" value="5" id="os12" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()"><br>
+
+					Физика 1 <select id="s13" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()">
+						<option value="1.2">Јануар/Фебруар</option>
+						<option value="1">Касније</option>
+					</select>
+					<input type="number" min="5" max="10" value="5" id="os13" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()"><br>
+
+					Програмирање 1 <select id="s14" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()">
+						<option value="1.2">Јануар/Фебруар</option>
+						<option value="1">Касније</option>
+					</select>
+					<input type="number" min="5" max="10" value="5" id="os14" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()"><br>
+
+					Лабораторијске вежбе из физике <select id="s15" onClick="racunanje()" onmouseout="racunanje()" onmouseover="racunanje()" oninput="racunanje()">
+						<option value="1.2">Јануар/Фебруар</option>
+						<option value="1">Касније</option>
+					</select>
+					<input type="number" min="5" max="10" value="5" id="os15" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()"><br>
+
+					Изборни предмет 1 <select id="s16" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()">
+						<option value="1.2">Јануар/Фебруар</option>
+						<option value="1">Касније</option>
+					</select>
+					<input type="number" min="5" max="10" value="5" id="os16" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()"><br>
+
+					Изборни предмет 2 <select id="s17" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()">
+						<option value="1.2">Јануар/Фебруар</option>
+						<option value="1">Касније</option>
+					</select>
+					<input type="number" min="5" max="10" value="5" id="os17" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()"><br>
+
+					<br>
+					<br><strong>Број обнова:</strong> <select id="obnova" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()">
+						<option value="0">0</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+					</select>
+				</div>
+				<div class="col">
+					<h5>Други семестар</h5>
+					<hr>
+					Основи електротехнике 2 <select id="s21" onClick="racunanje()" onmouseout="racunanje()" onClick="racunanje()" onmouseover="racunanje()" oninput="racunanje()">
+						<option value="1.2">Јун/Јул</option>
+						<option value="1">Касније</option>
+					</select>
+					<input type="number" min="5" max="10" value="5" id="os21" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()"><br>
+
+					Математика 2 <select id="s22" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()">
+						<option value="1.2">Јун/Јул</option>
+						<option value="1">Касније</option>
+					</select>
+					<input type="number" min="5" max="10" value="5" id="os22" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()"><br>
+
+					Физика 2/ ОРТ 2 <select id="s23" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()">
+						<option value="1.2">Јун/Јул</option>
+						<option value="1">Касније</option>
+					</select>
+					<input type="number" min="5" max="10" value="5" id="os23" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()"><br>
+
+					Програмирање 2 <select id="s24" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()"> oninput="racunanje()"
+						<option value="1.2">Јун/Јул</option>
+						<option value="1">Касније</option>
+					</select>
+					<input type="number" min="5" max="10" value="5" id="os24" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()"><br>
+
+					Лабораторијске вежбе из ОЕТ-а <select id="s25" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()">
+						<option value="1.2">Јун/Јул</option>
+						<option value="1">Касније</option>
+					</select>
+					<input type="number" min="5" max="10" value="5" id="os25" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()"><br>
+
+					Изборни предмет 1 <select id="s26" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()">
+						<option value="1.2">Јун/Јул</option>
+						<option value="1">Касније</option>
+					</select>
+					<input type="number" min="5" max="10" value="5" id="os26" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()"><br>
+
+					Изборни предмет 2 <select id="s27" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()">
+						<option value="1.2">Јун/Јул</option>
+						<option value="1">Касније</option>
+					</select>
+					<input type="number" min="5" max="10" value="5" id="os27" onClick="racunanje()" onmouseout="racunanje()" onChange="racunanje()" onmouseover="racunanje()" oninput="racunanje()">
+					<script>racunanje()</script>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
