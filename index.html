@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="undefined" crossorigin="anonymous">
-		<title>Рачунање коефицијента 1.3</title>
+		<title>Рачунање коефицијента 1.4</title>
 		<style>
 			body {
 				overflow-x: hidden;
@@ -35,12 +35,12 @@
 			obnove = document.getElementById("obnova").value;
 			koef = koef - obnove;
 			smerovi = "";
-			if (koef >= -1.0300) { smerovi += " <span class='badge badge-warning'>Физичка електроника</span>" }
-			if (koef >=  3.9867) { smerovi += " <span class='badge badge-warning'>Телеком</span>" }
-			if (koef >=  4.2133) { smerovi += " <span class='badge badge-warning'>Енергетика</span>" }
-			if (koef >=  4.5800) { smerovi += " <span class='badge badge-warning'>Електроника</span>" }
-			if (koef >=  7.2600) { smerovi += " <span class='badge badge-warning'>РТИ</span>" }
-			if (koef >=  9.2800) { smerovi += " <span class='badge badge-warning'>Сигнали</span>" }
+			if (koef >= 0.08) { smerovi += " <span class='badge badge-warning'>Физичка електроника</span>" }
+			if (koef >= 3.03) { smerovi += " <span class='badge badge-warning'>Телеком</span>" }
+			if (koef >= 3.47) { smerovi += " <span class='badge badge-warning'>Електроника</span>" }
+			if (koef >= 4.19) { smerovi += " <span class='badge badge-warning'>Енергетика</span>" }
+			if (koef >= 4.90) { smerovi += " <span class='badge badge-warning'>РТИ</span>" }
+			if (koef >= 9.14) { smerovi += " <span class='badge badge-warning'>Сигнали</span>" }
 
 			if (ESPB >= 48)          { smerovi += " <span class='badge badge-success'>буџет </span>" }
 			else if (ESPB >= 37)     { smerovi += " <span class='badge badge-info'>самофинансирање </span>" }
@@ -53,7 +53,7 @@
 	<body>
 		<div class="float-center">
 			<h3>Рачунање коефицијента - ЕТФ 1. година</h3>
-			<h5>Подаци базирани на ранг листи за упис у 2. годину школске 2022/23. године</h5>
+			<h5>Подаци базирани на ранг листи за упис у 2. годину школске 2024/25. године</h5>
 			<div class="">
 				<hr>
 				<h4 id="rez" class="text-danger">Коефицијент: </h4>
